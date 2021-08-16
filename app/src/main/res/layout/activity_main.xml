@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/expr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        android:textColor="#f6f6f6"
+        android:textSize="30sp"
+        tools:ignore="RtlCompat">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeMinTextSize="15sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:background="#000"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text=""
+        android:textAlignment="viewEnd"
+        android:textColor="#fff"
+        android:textSize="50sp"
+        tools:ignore="RtlCompat">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/bac"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="AC"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bc"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="C"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bb1"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="("
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bb2"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text=")"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="307dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bfact"
+                            style="@style/Widget.MaterialComponents.TimePicker.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/newbutton"
+                            android:text="X!"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/bsquare"
+                            style="@style/Widget.MaterialComponents.TimePicker.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/newbutton"
+                            android:text="X\u00B2"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/bsqrt"
+                            style="@style/Widget.MaterialComponents.TimePicker.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/newbutton"
+                            android:text="√"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/binv"
+                            style="@style/Widget.MaterialComponents.TimePicker.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/newbutton"
+                            android:text="1/X"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bln"
+                            style="@style/Widget.MaterialComponents.TimePicker.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/newbutton"
+                            android:text="ln"
+                            android:textAllCaps="false"
+                            android:textColor="#ffa500"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="307dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bsin"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="sin"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/bcos"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="cos"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/btan"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="tan"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:id="@+id/blog"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="log"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bdiv"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="÷"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/b7"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="7"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b8"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="8"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b9"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="9"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bmul"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="×"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/b4"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="4"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b5"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="5"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b6"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="6"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bmin"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="-"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/b1"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="1"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b2"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="2"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b3"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="3"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bplus"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="+"
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Button
+                        android:id="@+id/bpi"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="pi"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b0"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="0"
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bdot"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="."
+                        android:textColor="#fff"
+                        android:textSize="30sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/bequal"
+                        style="@style/Widget.MaterialComponents.TimePicker.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/newbutton"
+                        android:text="="
+                        android:textColor="#ffa500"
+                        android:textSize="30sp">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
